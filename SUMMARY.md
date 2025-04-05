@@ -1,6 +1,5 @@
-# Table of contents
+# Summary
 
-* [Welcome](OSCP/README.md)
-* [HTB-LAME](OSCP/HTB-LAME/README.md)
-  * [Lame Machine](HTB-LAME/Lame_Machine)
-  
+- [Home](README.md)
+- [HTB LAME](HTB-LAME/README.md)
+  - [Lame Machine](HTB-LAME/Lame_Machine.md)
