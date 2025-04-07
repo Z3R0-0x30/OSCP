@@ -1,5 +1,5 @@
 # Summary
 
-- [Home](README.md)
-- [HTB LAME](HTB-LAME/README.md)
-  - [Lame Machine](HTB-LAME/Lame_Machine.md)
+- [Home](OSCP/README.md)
+- [HTB LAME](OSCP/HTB-LINUX/README.md)
+  - [Lame Machine](Lame_Machine.md)
