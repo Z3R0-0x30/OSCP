@@ -1,23 +1,27 @@
 ## Machine Information
 
-**Machine name:** Sense
-**Machine IP:** 10.10.10.60
-**Difficulty:** easy
-**Genre:** Linux
+Machine Name: Sense
+Machine IP: 10.10.10.60
+Machine difficulty: easy
+Machine Genre: Linux
 
 ## Reconnaissance: the beginning
+
 Reconnaissance (Recon) refers to the process of gathering information about a target system, application, or network before attempting an attack or exploitation. This is typically the first phase in any type of hacking and penetration testing.
 
 ### Types of Reconnaissance
+
 **1. Passive Reconnaissance -** Gathering information without directly interacting with the target.
 **2. Active Reconnaissance -** Directly interacting with the target to extract information.
 
 For this machine, we will be using a mix of both types of reconnaissance. 
 
 ### 1. Ports and Services Scan
+
 It is a crucial part to scan for open ports and services in a machine, because most of the time they are the initial entry point for gaining access to the system. Looking for unusual ports or outdated service version will eventually lead us to a vulnerability, and then we will generating an exploit for it. 
 
 #### Nmap Scan
+
 I performed a intense nmap scan on the machine, and the command used was the following:
 `sudo nmap -sV -sC -O 10.10.10.60 > nmapSense.txt`
 
@@ -27,11 +31,13 @@ I performed a intense nmap scan on the machine, and the command used was the fol
 - `-O` - OS scan
 
 **Output:**
+
 ![nmap output](images-sense/1.png)
 
 As we can see that the nmap output is not too much. The only ports or services which are open are 80/http and 443/https. I felt shocked, because most of the time there are atleast 4 services running, but with this machine we only have 2 service which are so obvious ones. Anyways, without thinking much I started looking for vulnerabilities, so I started looking at *lighttpd 1.4.35*, but I was unable to find anything interesting. 
 
 ### 2. Web Recon
+
 After finding nothing interesting, I immediately opened the web server that was running on the machine. I opened the webserver and went to "View Source", but had no luck in finding any sweet or suspicious comment. I decided to have a look at the webserver's interface, so I started playing with the login page that we were provided.
 
 ![webserver](images-sense/2.png)
@@ -39,9 +45,11 @@ After finding nothing interesting, I immediately opened the web server that was 
 As seen clearly, this is a **pfSense Firewall** login page, no doubt why this machine's name is Sense. After trying cross-site scripting (XSS), SQL injection, and trying default credentials I thought to brute-force it, and failing terribly in those two things I realised maybe I am missing something. I didn't wanted to waste my time in continuous thinking, so I performed a well-known technique of active recon, subdir search.
 
 I used the following command to perform subdir scan:
+
 `gobuster dir --url https://10.10.10.60/ --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -k -x .txt`
 
 **Understanding the command:**
+
 - `dir` - specifies a directory search
 - `--url` - argument to specify the url that we want to scan for subdirs
 - `--wordlist` - Specifies the wordlist that we want to use
@@ -61,12 +69,14 @@ Analysing the changelog.txt sub-file, we find a very crucial statement, which is
 ![system-users](images-sense/5.png)
 
 Woah! that is a big reveal. We found credentials in system-user file. Following are the credentials mentioned here:
+
 ```
 username = rohit
 password = pfsense (default)
 ```
 
 I tried login into the pfsense using the credentials that we just found, and I was able to successfully access the pfSense firewall web-dashboard. I started looking within all tabs, but I found nothing interesting except a proper version for the pfSense that was being used.
+
 
 ![pfSense logged in](images-sense/6.png)
 
@@ -86,6 +96,7 @@ Initially, I started googling "pfSense Vulnerabilities" without specifying the v
 I have marked the exploit that I thought will definitely work, why? Firstly, it exactly fits our version (2.1.3) and secondly, it is a python script which is easy to edit so we can make a unique exploit if needed. I immediately imported this exploit using the following command and checked for correct options in the program, then exploited it.
 
 Command to download the exploit:
+
 `searchsploit -m php/webapps/43560.py`
 
 Command for exploitation (with a listener):
