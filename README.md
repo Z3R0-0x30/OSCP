@@ -1,4 +1,4 @@
-![cover-page](cover_page.png)
+![](cover_page.png)
 
 Hey there! I’m **Z3R0x30**, a passionate **pentester**, **red teamer**, and **offensive hacker** with a deep interest in pushing the boundaries of security. Throughout my career, I've had the privilege of working on various types of challenges, and one of the things I enjoy most is solving complex problems in creative ways.
 
