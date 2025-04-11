@@ -204,6 +204,8 @@ ActiveMQ is a message broker, which are software that act as messengers between 
 1. [ActiveMQ](https://activemq.apache.org/)
 2. [Wikipedia-ActiveMQ](https://en.wikipedia.org/wiki/Apache_ActiveMQ)
 
+## Exploitation: Gaining access
+
 Apache ActiveMQ is running on port 61616, which is a popular open source message broker built on top of Java. They are implementations of the Java Messaging Service (JMS) which allows applications to send data back and forth between one another. I searched for exploits on ActiveMQ on searchsploit and expected to get something, but ended up with no match with version 5.15.15.
 
 ![searchsploit](images-broker/5.png)
@@ -223,6 +225,8 @@ I found a metasploit module exploit which is used for a deserialization vulnerab
 **Links:**
 1. [CVE-2023-46606](https://nvd.nist.gov/vuln/detail/cve-2023-46604)
 2. [Exploit](https://packetstorm.news/files/id/175676)
+
+### Metasploit: activeMQ exploit
 
 After some research on what the exploit is, how it works and why the vulnerability is affected by this exploit, I immediately opened metasploit for testing this exploit. While doing my research, I was confident that this will work and fun part was that it will give me a user-level access, which means I will have an opportunity to perform privilege escalation.
 
@@ -264,6 +268,8 @@ I looked at the default target and it was Windows, but in our scenario we need i
 Yey! We got user-level access and I wanted an bash (metasploit shell sucks!) so I used `shell` command to spawn one. As we already are a user, I started my search for user flag and I did found it in home directory.
 
 ![user-flag](images-broker/12.png)
+
+### Privilege Escalation: Get the root
 
 It is not mandatory to hide the flag, but I will do it so you all first try pwning the system by yourself and do not just answer the flag to solve the machines. If you are thinking to brute-force the flag with starting 3 characters shown, then all the best with all those billions of possible combinations.
 
