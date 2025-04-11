@@ -4,7 +4,6 @@
 **Machine IP:** 10.10.11.243
 **Machine Diff:** Easy
 **Machine OS:** Linux
-
 ## Reconnaissance - gather info
 
 This might seem like a boring part of hacking, where you will have to consider every single information that you get out of the target. If you do not find a way to enjoy this step, then forget about exploits, because information is superior than exploits.
