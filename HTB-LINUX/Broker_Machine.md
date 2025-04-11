@@ -1,8 +1,11 @@
 ## Machine Information
 
 **Machine Name:** Broker
+
 **Machine IP:** 10.10.11.243
+
 **Machine Diff:** Easy
+
 **Machine OS:** Linux
 ## Reconnaissance - gather info
 
@@ -20,9 +23,11 @@ If you only have an IP of the target, then ports and services scanning is very c
 
 
 **Command I performed:**
+
 `sudo nmap -sVC -p- -O 10.10.11.243 | tee nmapBroker.txt`
 
 **Understanding the command:**
+
 - **-sVC** - This is a concatenate option with -sV (version scan) and -sC (default script scan). If you want to know more, read my [Lame](HTB-LINUX/Lame_Machine) writeup.
 - **-p-** - This is used for scanning all open ports out of 65535 ports.
 - **-O** - This is used to scan for predicting what OS is used by the target.
