@@ -17,4 +17,9 @@ My Passion Areas:
 
 This series is intended to help both beginners and advanced learners alike. Whether you're new to the scene or looking for more in-depth technical content, there will be something here for everyone. Stay tuned for regular updates as I continue exploring new HTB boxes and sharing my approach to solving them.
 
+**My socials:**
+1. [LinkdIn](https://www.linkedin.com/in/prince-patel-72065b262/)
+2. [Discord - CYBER X ARMY](https://discord.gg/wyfwSxn3YB)
+3. [Instagram](https://www.instagram.com/_zerox30_?igsh=MWtidnJ5b3RhbTN2cw%3D%3D&utm_source=qr)
+
 Let’s hack the world, one box at a time.
