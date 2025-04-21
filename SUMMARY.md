@@ -7,5 +7,6 @@
   - [Broker Machine](HTB-LINUX/Broker_Machine.md)
   - [Nibbles Machine](HTB-LINUX/Nibbles_Machine.md)
   - [Dog Machine](HTB-LINUX/Dog_Machine.md)
+  - [Shocker Machine](HTB-LINUX/Shocker_Machine.md)
 
 
