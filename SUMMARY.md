@@ -1,6 +1,7 @@
 # Summary
 
 - [Intro - whoami](README.md)
+- [Roadmap to OSCP - Hackthebox](roadmap_to_oscp.md)
 - [Hack the box - Linux](HTB-LINUX/README.md)
   - [Lame Machine](HTB-LINUX/Lame_Machine.md)
   - [Sense_Machine](HTB-LINUX/Sense_Machine.md)
