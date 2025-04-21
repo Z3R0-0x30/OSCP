@@ -1,3 +1,4 @@
+___
 ## Machine Information
 
 - **Machine Name:** Dog
@@ -5,6 +6,7 @@
 - **Machine Difficulty:** Easy
 - **Machine OS:** Linux
 
+___
 ## Reconnaissance - gathering information
 
 Information gathering is a very crucial step in any kind of hack, and it is performed by all kinds of hackers regardless of what hat they are wearing. In this, we try to collect as much information as possible about the target, so later on we can find a vulnerability to exploit.
@@ -90,7 +92,8 @@ These information can further help us to find more valuable things or maybe even
 
 Lastly, I search for meaningful information in the config/active file and found an email address. Considering the fact that we already have found a password, we can try using it with this email to login into the admin portal. There was also core/modules/system directory where we found the exact version of **backdrop** in system.info file.
 
-## Gaining Access
+___
+## Exploitation: Gaining Access
 
 ![](images-dog/17.png)
 
@@ -146,6 +149,7 @@ After spending some time I found a way to get inside the system without any trou
 
 Nice achievement! We were able to successfully login into the user through SSH and a reused password. We also got our first flag, now we will find ways to escalate our privileges.
 
+___
 ## Privilege Escalation - root Me Please
 
 Privilege Escalation is a process of elevating your privileges from a normal user to a admin-level or root user. It is used in many challenges, and it is one of the most complex things but also simpler to achieve. The exploits or path way used in privilege escalation can sometimes be difficult to understand, but it is worth giving a shot.
@@ -169,6 +173,7 @@ Great! We found a binary that we can execute as johncusack user as root, and we 
 
 Finally we were successfully able to escalate our privileges as root and got the root flag. The detailed explaination for exploits used might be released soon on my discord server, so don't forget to join it.
 
+___
 ## Conclusion - lesson learned
 
 Time for concluding everything that we can learn from this vulnerable machine, such as detail on vulnerability or fixes available. For me, the initial foothold was quite difficult as compared to privilege escalation. If there are any other possible ways to exploit the machine then do not hesitate to ping the methodology on my discord server's `HTB` channel by mentioning me.

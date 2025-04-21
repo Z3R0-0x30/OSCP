@@ -1,12 +1,12 @@
+___
 ## Machine Information
 
-**Machine Name:** Broker
+- **Machine Name:** Broker
+- **Machine IP:** 10.10.11.243
+- **Machine Type:** Easy
+- **Machine OS:** Linux
 
-**Machine IP:** 10.10.11.243
-
-**Machine Diff:** Easy
-
-**Machine OS:** Linux
+___
 ## Reconnaissance - gather info
 
 This might seem like a boring part of hacking, where you will have to consider every single information that you get out of the target. If you do not find a way to enjoy this step, then forget about exploits, because information is superior than exploits.
@@ -208,6 +208,7 @@ ActiveMQ is a message broker, which are software that act as messengers between 
 1. [ActiveMQ](https://activemq.apache.org/)
 2. [Wikipedia-ActiveMQ](https://en.wikipedia.org/wiki/Apache_ActiveMQ)
 
+___
 ## Exploitation: Gaining access
 
 Apache ActiveMQ is running on port 61616, which is a popular open source message broker built on top of Java. They are implementations of the Java Messaging Service (JMS) which allows applications to send data back and forth between one another. I searched for exploits on ActiveMQ on searchsploit and expected to get something, but ended up with no match with version 5.15.15.
@@ -318,6 +319,7 @@ Yey!! We are root now. We were able to successfully perform privilege escalation
 
 ![root-flag](images-broker/19.png)
 
+___
 ## Conclusion - The epilogue
 
 In this section, I will provide a descriptive explaination for the vulnerabilities identified and exploits that were used. Any extra information that is not directly linked with the machine will be shared in this section. This is very crucial section, as it will cover the true understanding behind the hack.

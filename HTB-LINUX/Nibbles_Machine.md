@@ -1,3 +1,4 @@
+___
 ## Machine Information
 
 - **Machine Name:** Nibbles
@@ -5,6 +6,7 @@
 - **Machine Type:** Easy
 - **Machine OS:** Linux
 
+___
 ## Reconnaissance - gathering information
 
 Reconnaissance might sound boring, but if you perform it correctly then there is no machine that cannot get hacked by you. It is a very crucial step before starting anything, because from this step you will gather information about the target, and information is the source of all vulnerabilities.
@@ -105,6 +107,7 @@ I was successfully able to login to the nibbleblog dashboard with the following 
 - **Username:** admin
 - **Password:** nibbles
 
+___
 ## Exploitation - breaking the system
 
 We are inside the admin dashboard, and we now have enough information to break the system. Exploitation simply means when you perform something that gives you access within the system. As far as my knowledge goes, this machine has a section of privilege escalation, it means that the first foothold will be of a normal user.
@@ -149,6 +152,7 @@ Honestly, this privilege escalation was smooth. I did took a little research but
 
 I create a file with that name and write a basic shell executable instruction. I run the monitor.sh with sudo and I get root access, and was successful to get the root flag.
 
+___
 ## Conclusion - what was learned
 
 It is very important to review all the things you have performed and go through deeply in all the exploits and vulnerabilities that you encountered during the hack. I recommend that if you have time then definitely go deep in errors also, and rabbit holes because they will give you a deeper understanding about the architecture of the target system. Sometimes, a firewall might be blocking your connection, and by analyzing it you may find ways to bypass it or even get a good knowledge on how the firewall is actually working.

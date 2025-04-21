@@ -1,25 +1,76 @@
 ![](cover_page.png)
 
-Hey there! I’m **Z3R0x30**, a passionate **pentester**, **red teamer**, and **offensive hacker** with a deep interest in pushing the boundaries of security. Throughout my career, I've had the privilege of working on various types of challenges, and one of the things I enjoy most is solving complex problems in creative ways.
+# 👋 Welcome to My HTB Journey
 
-On this page, I’ll be sharing my **HTB writeups** — a series of detailed walkthroughs on different Hack The Box (HTB) machines. Whether you're preparing for your **OSCP** certification, diving into penetration testing, or just enjoying the journey of hacking, I hope these writeups can help you level up your skills and knowledge.
+## By Prince Patel a.k.a **Z3R0x30**
 
-My Passion Areas:
-- Binary Exploitation
-- Web Application Exploitation
-- Privilege Escalation
-- Reverse Engineering
-- Network Attacks & Exploits
-- Cryptography Challenges
-- Windows & Linux Exploitation
-- Post-Exploitation Techniques
-- Active Directory Attacks
+Hey there! I’m **Prince Patel**, known in the hacking world as **Z3R0x30** — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
 
-This series is intended to help both beginners and advanced learners alike. Whether you're new to the scene or looking for more in-depth technical content, there will be something here for everyone. Stay tuned for regular updates as I continue exploring new HTB boxes and sharing my approach to solving them.
+Over the years, I’ve had the privilege of tackling countless security challenges, exploring various techniques, and solving complex problems in unique and creative ways. Through this platform, I want to share my knowledge, experiences, and passion for hacking with the community that made me who I am.
 
-**My socials:**
-1. [LinkdIn](https://www.linkedin.com/in/prince-patel-72065b262/)
-2. [Discord - CYBER X ARMY](https://discord.gg/wyfwSxn3YB)
-3. [Instagram](https://www.instagram.com/_zerox30_?igsh=MWtidnJ5b3RhbTN2cw%3D%3D&utm_source=qr)
+---
+## 📖 What This Page Is About
 
-Let’s hack the world, one box at a time.
+This is the **Introduction** to my live journey toward the **OSCP** certification.
+
+Here, I’ll be sharing detailed **Hack The Box (HTB) writeups**, walkthroughs, and insights—designed for both beginners and seasoned hackers. Whether you're:
+
+- Just starting out in cybersecurity
+- Preparing for your **OSCP**
+- Brushing up on specific techniques
+- Or simply addicted to hacking like I am...
+
+You’ll find valuable content here to boost your skills, one machine at a time.
+
+---
+## 🔥 My Passion Areas
+
+I'm a hands-on hacker who loves diving deep into a wide variety of offensive topics. Some of the areas I specialize in:
+
+- 🧠 Binary Exploitation
+- 🌐 Web Application Exploitation
+- 🔐 Privilege Escalation (Windows & Linux)
+- 🔍 Reverse Engineering
+- 📡 Network Attacks & Exploits
+- 🧮 Cryptography Challenges
+- 🧰 Post-Exploitation Techniques
+- 🖥️ Windows & Linux Exploitation
+- 🏢 Active Directory Attacks
+
+---
+
+## 💬 My Goal
+
+This isn't just about my certification. It’s about building a **community**.  
+A space for hackers, learners, and enthusiasts to grow, collaborate, and thrive.
+
+If you're into:
+
+- Hack The Box machines
+- Capture The Flag (CTF) events
+- Red & Blue Teaming
+- Hardware & IoT Hacking
+- Cybersecurity discussions of all kinds...
+
+Then you’ll feel right at home here.
+
+---
+
+## 📡 Connect With Me
+
+Let’s build, learn, and hack together. Join the conversation, share ideas, and be part of the growing cyber army!
+
+- 🔗 [LinkedIn](https://www.linkedin.com/in/prince-patel-72065b262/)
+- 💬 [Discord - CYBER X ARMY](https://discord.gg/wyfwSxn3YB)
+- 📸 [Instagram](https://www.instagram.com/_zerox30_?igsh=MWtidnJ5b3RhbTN2cw%3D%3D&utm_source=qr)
+
+---
+
+## 🧠 Final Words
+
+> I don’t consider myself a professional—and maybe I never will. There’s always someone better.  
+> But I’m on a mission to build a space where **we all grow together**—because that’s what real hacking is about.
+
+Stay curious. Stay sharp. Stay ethical.  
+Let’s hack the world, **one box at a time**.  
+— _Z3R0x30_

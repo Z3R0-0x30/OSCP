@@ -1,10 +1,12 @@
+___
 ## Machine Information
 
-Machine Name: Sense
-Machine IP: 10.10.10.60
-Machine difficulty: easy
-Machine Genre: Linux
+- **Machine Name:** Sense
+- **Machine IP:** 10.10.10.60
+- **Machine Type:** Easy
+- **Machine OS:** Linux
 
+___
 ## Reconnaissance: the beginning
 
 Reconnaissance (Recon) refers to the process of gathering information about a target system, application, or network before attempting an attack or exploitation. This is typically the first phase in any type of hacking and penetration testing.
@@ -82,6 +84,7 @@ I tried login into the pfsense using the credentials that we just found, and I w
 
 I have marked the version section with a red box, and we can clearly see that it is a **pfSense 2.1.3-Release** version that works on **FreeBSD 8.3-Release-p16**. Looking at the version, I was getting a feeling that it is vulnerable, and also we were previous told that 2 vulnerabilities were fixed out of 3, so definitely this is our entry point. I started searching and googling for available vulnerabilities and exploits.
 
+___
 ## Gaining Access: the end
 
 Initially, I started googling "pfSense Vulnerabilities" without specifying the version, I found few interesting things, but I wasn't confirmed if they will work or not. I then searched for vulnerabilities and exploits specific to the pfSense version. After keeping some exploits and vulnerabilities in my mind and deciding to go through a well-known tool for searching exploits, I performed the following command:
@@ -150,6 +153,7 @@ exploit
 
 I have hidden the flags because I want people go and try themselves and do not just copy paste the flags. I also have described every detail about vulnerabilities identified, how to mitigate them and what should we learn from this under the conclusion section.
 
+___
 ## Conclusion
 
 ### Information Disclosure
