@@ -2,9 +2,9 @@
 
 # 👋 Welcome to My HTB Journey
 
-## By Prince Patel a.k.a **Z3R0x30**
+## By *Z3R0x30 (0x30)*
 
-Hey there! I’m **Prince Patel**, known in the hacking world as **Z3R0x30** — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
+Hey there! I’m **ZER0x30**, known in the hacking world as **Z3R0x30 (0x30)** — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
 
 Over the years, I’ve had the privilege of tackling countless security challenges, exploring various techniques, and solving complex problems in unique and creative ways. Through this platform, I want to share my knowledge, experiences, and passion for hacking with the community that made me who I am.
 
@@ -60,7 +60,6 @@ Then you’ll feel right at home here.
 
 Let’s build, learn, and hack together. Join the conversation, share ideas, and be part of the growing cyber army!
 
-- 🔗 [LinkedIn](https://www.linkedin.com/in/prince-patel-72065b262/)
 - 💬 [Discord - CYBER X ARMY](https://discord.gg/wyfwSxn3YB)
 - 📸 [Instagram](https://www.instagram.com/_zerox30_?igsh=MWtidnJ5b3RhbTN2cw%3D%3D&utm_source=qr)
 
