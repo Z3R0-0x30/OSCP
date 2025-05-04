@@ -10,6 +10,6 @@
   - [Dog Machine](HTB-LINUX/Dog_Machine.md)
   - [Shocker Machine](HTB-LINUX/Shocker_Machine.md)
 - [Hack the box - Windows](HTB-WINDOWS/README.md)
-  - [Legacy Machine](Legacy_Machine.md)
+  - [Legacy Machine](HTB-WINDOWS/Legacy_Machine.md)
 
 
