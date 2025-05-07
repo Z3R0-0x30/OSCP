@@ -143,7 +143,57 @@ The above exploit makes a file upload request with my jsp file which we used in 
 
 This step is the final stage of our hack, if you are able to access admin or root privileges then you literally become GOD of the system. You can do anything, hence it is a common practice in CTFs, and challenges to get the root access of a system. It is pretty easy if you know what you are pwning, or else it might be complicated as hell.
 
+### Searching for the exploit
+
 ![](images-artic/18.png)
+
+**Command:**
+`C:\> systeminfo`
+
+This gives us a full detailing of the system, and we can note down the **OS Name** and **OS Version** and google it to find any possible privilege escalation techniques. Before that I would like to use a well-known program to find possible privilege escalation. Copy all the information and save it into a file on your local system and name it anything (in my case it is 'arctic_sysinfo.txt').
+
+![](images-artic/19.png)
+![](images-artic/20.png)
+
+Next step is to look for available vulnerabilities that will guide us to the root, and going through it all manually might take ages so it is better to use an automated script for this. I recommend to also have a good understanding on how the script works by yourself, and if you have guts and possible time then try building a script for yourself. I will only go through the available scripts, and will not spend time in explaining how it find vulnerabilities, cause that will take a lot of typing. 
+
+I will be using Windows-Exploit-Suggester to find possible privilege escalation techniques on this machine, you can also use JuicyPotato (it is easy and user-friendly), but this is my go-to tool that is the reason I prefer this primarily.
+
+**Commands:**
+```
+git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester
+cd Windows-Exploit-Suggester
+./windows-exploit-suggester.py --update
+./windows-exploit-suggester.py --database 2025-04-15-mssb.xls -- systeminfo artic_sysinfo.txt
+```
+
+This will provide you with all possible privilege escalation on the target machine. Keep in mind that every exploit might not work because the scanning of the vulnerability  done by the script defines the system vulnerable to a particular issue on the basis of configurations, setup, and system information, but it is not always the case that if your system information has a particular config it is vulnerable. This is the main difference between vulnerability scanning and vulnerability assessment or penetration testing.
+
+![](images-artic/20_1.png)
+
+I almost tried 3 exploits and failed terribly, some were metasploit exploits so I had to shift my shell to metasploit even though I hate using metasploit (It is perfect tool, but for a learning attitute it is not good), cause I hate spend so much time on this that I was almost on the edge of giving up.
+
+After trying almost 3 exploit (last was ms10-047), I thought of just stop this machine and jump onto another but there is a weird thing about my mind, if something is challenging then it pushes me to do it. So, I thought maybe for the last time I am gonna try my 4th exploit which was ms10-059, but the problem was it is not shown in searchsploit result so I had to manually go to the google and search for it.
+
+I was not confident on this exploit with the fact that it does not exist in searchsploit or metasploit, but I did found an exploit on github.
+
+![](images-artic/29.png)
+
+I did my research and the way we are gonna exploit the machine is by finding a way to upload this executable on our target machine (which we can do at this stage with our own python script) and then executing it in a similar way you would run a reverse shell. The executable takes two arguments, one is the IP address of the attacker and the port number of the attacker, and you will have to setup a listener on that parameter.
+
+![](images-artic/23.png)
+![](images-artic/30.png)
+
+In the script shown, I have editted the field that request payload, and changed few other things that were not important to the functionality. I changed the executable name to "root_me.exe", and it doesn't matter how you name it. I was successfully able to upload the executable file on the target system.
+
+**Command:**
+`./zerox30_artic_exploit.py 10.10.10.11 8500 root_me.exe`
+
+![](images-artic/31.png)
+![](images-artic/32.png)
+
+We finally are on the last stage, where I was able to execute the file on the target system by giving it the correct arguments, and got a reverse shell that is actually from the user `nt authority\system` which is equivalent to the root user of linux. We were also able to extract the root flag and complete the challenge.
+
 
 
 
