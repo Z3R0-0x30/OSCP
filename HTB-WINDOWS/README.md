@@ -2,6 +2,6 @@
 
 List of HTB Windows boxes that are solved by ***Z3R0x30***
 
-| [Legacy](Legacy_Machine.md)               | SOON |
-| ----------------------------------------- | ---- |
-| ![Legacy](images-legacy/cover_legacy.png) | SOON |
+| [Legacy](Legacy_Machine.md)               | [Arctic](Arctic_Machine.md)          |
+| ----------------------------------------- | ------------------------------------ |
+| ![Legacy](images-legacy/cover_legacy.png) |   ![](images-artic/cover_arctic.png) |
