@@ -11,5 +11,7 @@
   - [Shocker Machine](HTB-LINUX/Shocker_Machine.md)
 - [Hack the box - Windows](HTB-WINDOWS/README.md)
   - [Legacy Machine](HTB-WINDOWS/Legacy_Machine.md)
+  - [Arctic Machine](HTB-WINDOWS/Arctic_Machine.md)
+
 
 
