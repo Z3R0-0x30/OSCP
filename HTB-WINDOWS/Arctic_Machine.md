@@ -155,6 +155,8 @@ This gives us a full detailing of the system, and we can note down the **OS Name
 ![](images-artic/19.png)
 ![](images-artic/20.png)
 
+Windows Exploit Suggester: [Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
+
 Next step is to look for available vulnerabilities that will guide us to the root, and going through it all manually might take ages so it is better to use an automated script for this. I recommend to also have a good understanding on how the script works by yourself, and if you have guts and possible time then try building a script for yourself. I will only go through the available scripts, and will not spend time in explaining how it find vulnerabilities, cause that will take a lot of typing. 
 
 I will be using Windows-Exploit-Suggester to find possible privilege escalation techniques on this machine, you can also use JuicyPotato (it is easy and user-friendly), but this is my go-to tool that is the reason I prefer this primarily.
@@ -179,6 +181,8 @@ I was not confident on this exploit with the fact that it does not exist in sear
 
 ![](images-artic/29.png)
 
+Windows-kernel-exploit: [Chimichurri](https://github.com/egre55/windows-kernel-exploits/tree/master/MS10-059%3A%20Chimichurri/Compiled)
+
 I did my research and the way we are gonna exploit the machine is by finding a way to upload this executable on our target machine (which we can do at this stage with our own python script) and then executing it in a similar way you would run a reverse shell. The executable takes two arguments, one is the IP address of the attacker and the port number of the attacker, and you will have to setup a listener on that parameter.
 
 ![](images-artic/23.png)
@@ -194,8 +198,70 @@ In the script shown, I have editted the field that request payload, and changed 
 
 We finally are on the last stage, where I was able to execute the file on the target system by giving it the correct arguments, and got a reverse shell that is actually from the user `nt authority\system` which is equivalent to the root user of linux. We were also able to extract the root flag and complete the challenge.
 
+## Conclusion - What was learned!
+
+This section is where I will give my concluding statement for this machine, I will be describing the vulnerabilities I found and how the exploit works. This helps a lot of people to actually understand how the system is vulnerable and how we can fix it. This is my blue-team attitude because I also spend a lot of time in thinking how to defend things, even though I am a natural red teamer.
+
+### Directory Listing - showing everything!
+
+How a web server works? There is a default directory where website files are stored. Many of the linux system have this as */var/www/html/* and in Windows it is *C:/inetpub/wwwroot/*. These are the places where website files are stored. If this is not configured properly, your files can be viewed in browser to the users and they might be able to interact with them, this is pretty scary.
+
+> *"Directory listing is scary, it is like walking down on a weird street with gold in your hand"*
+
+#### Fix - For developers
+
+There are hundreds of software that provide web services, Apache, Microsoft ISS, Tomcat, etc. Every software has a different way to disable directory listing, here I will explain a way for Microsoft ISS.
+
+*Steps:*
+1. Open ISS manager on your system
+2. Go to "Directory Browsing"
+3. Disable it
+
+For other software, I will attach a really good link, check that out: [Disable Directory Listing](https://www.invicti.com/blog/web-security/disable-directory-listing-web-servers/#microsoftiisserver)
+
+### Adobe ColdFusion - Directory Traversal
+
+We were able to gather the password (hashed) for ColdFusion admin by performing a directory traversal. This happens when a user input is treated without sanitization and if the user manages to craft a path to a particular path, then ColdFusion will open that file and show its content.
+
+#### Fix - How do I stop it?
+
+The best recommended thing I found is to update Adobe ColdFusion to **greater than 9.0.1**, cause the affected versions for this vulnerability are **<= 9.0.1**. I don't know why they took so long to figure a fix, it is just a sanitization fix, but then I realised that Adobe is like Windows (being vulnerable is their reputation).
+
+CVE Link: [CVE-2010-2861](https://nvd.nist.gov/vuln/detail/cve-2010-2861)
+
+### Adobe ColdFusion - File upload
+
+We were able to exploit a file upload vulnerability after logging into the adobe coldfusion, and it is pretty sick vulnerability. I exploited it in two ways, manually and with my script but at the core of it they both are doing the same thing. It was reported that there is a misconfiguration in file upload, that allows execution of JSP files. What is JSP? They are kind of PHP files written in Java. JSP stands for JavaServer Pages and this file is a interactive page just like PHP files.
+
+#### Fix - Stop using adobe?
+
+The best recommendation is stop using.... No just kidding, the actual recommendation is to update your ColdFusion to the latest update available, or apply the Hotfix for **ColdFusion 8 input sanitization**, doing this you will be able to use same version of ColdFusion but will fix the vulnerability.
+
+One fix is to edit the **config.cfm** file at **\CFIDE\scripts\ajax\FCKeditor\editor\filemanager\connectors\cfm** to disable uploads. For you, FCKeditor might be something different, so do this according to your structure.
+
+*Exploits:*
+1. [Arbitrary File Upload](https://www.exploit-db.com/exploits/45979)
+2. [Remote Code Execution](https://www.exploit-db.com/exploits/50057)
+
+*Vulnerability Article:* [Good reading](https://www.acunetix.com/vulnerabilities/web/coldfusion-8-fckeditor-file-upload-vulnerability/)
+
+### Windows kernel exploit - Ahhh, can we fix it?
+
+For privilege escalation, we exploited a vulnerability named **MS10-059**, and it was really helpful for privilege escalation because we were failing in almost all exploitation trials on other vulnerabilities. This vulnerability could allow elevation of privilege if an attacker runs a specially crafted application. An attacker must have valid logon credentials and be able to log on locally to exploit this vulnerability. Good part is, this vulnerability could not be exploited remotely or by anonymous users.
+
+#### Fix - Yes, there is a fix
+
+The best recommended fix would be to update to a non-affect windows operating system: *Windows XP Service Pack 3, Windows XP Professional x64 Edition Service Pack 2, Windows Server 2003 Service Pack 2, Windows Server 2003 x64 Edition Service Pack 2, Windows Server 2003 with SP2 for Itanium-based Systems*.
+
+##### Microsoft Mitigation
+This is not one vulnerability but a class of multiple vulnerabilities for elevating privileges, and Microsoft generally gave this mitigation:
+
+> *Mitigation refers to a setting, common configuration, or general best-practice, existing in a default state, that could reduce the severity of exploitation of a vulnerability. The following mitigating factors may be helpful in your situation:
+> 	 An attacker must have valid logon credentials and be able to log on locally to exploit this vulnerability. The vulnerability could not be exploited remotely or by anonymous users.*
+
+Source: [Microsoft Description](https://learn.microsoft.com/en-us/security-updates/securitybulletins/2010/ms10-059)
 
 
+To end this walkthrough, I would say if you are interesting in **Cybersecurity, Hacking, Pwning, Red teaming, Blue teaming or any security-related work**, then you should try joining my discord community, where I am trying to build a community of learners and experts in one room.
 
-
-
+Discord: [CYBER X ARMY](https://discord.gg/wyfwSxn3YB)
