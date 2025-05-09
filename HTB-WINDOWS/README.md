@@ -1,6 +1,6 @@
 ## Windows Machines
 
-List of HTB Windows boxes that are solved by ***Z3R0x30***
+List of HTB Windows boxes that are solved by ***Z3R0***
 
 | [Legacy](Legacy_Machine.md)               | [Arctic](Arctic_Machine.md)          |
 | ----------------------------------------- | ------------------------------------ |

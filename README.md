@@ -60,7 +60,7 @@ Then you’ll feel right at home here.
 
 Let’s build, learn, and hack together. Join the conversation, share ideas, and be part of the growing cyber army!
 
-- 💬 [Discord - CYBER X ARMY](https://discord.gg/wyfwSxn3YB)
+- 💬 [Discord](https://discord.gg/wyfwSxn3YB)
 - 📸 [Instagram](https://www.instagram.com/_zerox30_?igsh=MWtidnJ5b3RhbTN2cw%3D%3D&utm_source=qr)
 
 ---
@@ -72,4 +72,4 @@ Let’s build, learn, and hack together. Join the conversation, share ideas, and
 
 Stay curious. Stay sharp. Stay ethical.  
 Let’s hack the world, **one box at a time**.  
-— _Z3R0x30_
+— _Z3R0_
