@@ -2,9 +2,9 @@
 
 # 👋 Welcome to My HTB Journey
 
-## By *Z3R0x30 (0x30)*
+## By *Z3R0 (0x30)*
 
-Hey there! I’m **ZER0x30**, an anonymous cybersecurity researcher — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
+Hey there! I’m **ZER0 (0x30)**, an anonymous cybersecurity researcher — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
 
 Over the years, I’ve had the privilege of tackling countless security challenges, exploring various techniques, and solving complex problems in unique and creative ways. Through this platform, I want to share my knowledge, experiences, and passion for hacking with the community that made me who I am.
 

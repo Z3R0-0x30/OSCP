@@ -1,7 +1,7 @@
 ![](offensivesecurity.png)
 
 ---
-# Hello fellow hackers, this is Z3R0x30 👾
+# Hello fellow hackers, this is Z3R0 👾
 
 Welcome to my journey towards conquering the **OSCP**! As a passionate cybersecurity enthusiast, I know firsthand how challenging it is to find a clear path to the OSCP certification. While I haven’t earned the cert yet, I’ll be documenting my progress live—sharing my thoughts, writeups, and experiences as I work through **Hack The Box** machines and sharpen my offensive security skills.
 
