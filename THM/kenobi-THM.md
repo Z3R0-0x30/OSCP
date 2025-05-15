@@ -114,6 +114,11 @@ I transfer the exploit to our target system using scp command, and then simply e
 
 In this lab, I have used two exploits that were build by me and they are totally unique to this lab. I really love writing my own exploits and teaching people how they worked, and you will find my exploits to be much more simpler. So, let's dive to know how they work....
 
+**Links to the exploits:**
+1. [CVE-2015-3306](https://github.com/Z3R0-0x30/CVE-2015-3306)
+2. [CVE-2021-4034](https://github.com/Z3R0-0x30/CVE-2021-4034)
+
+
 ### CVE-2015-3306 - ProFTP mod_copy
 **CVE-2015-3306** is a critical vulnerability in **ProFTPd 1.3.5** that was discovered in 2015. ProFTPd is a widely used open-source FTP server, and this particular vulnerability arises from a **buffer overflow** in the way the server handles incoming FTP commands, specifically the `SIZE` command. Buffer overflows occur when more data is written to a buffer than it can handle, leading to memory corruption, which can be exploited to execute arbitrary code.
 
