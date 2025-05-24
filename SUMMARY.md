@@ -12,6 +12,7 @@
 - [Hack the box - Windows](HTB-WINDOWS/README.md)
   - [Legacy Machine](HTB-WINDOWS/Legacy_Machine.md)
   - [Arctic Machine](HTB-WINDOWS/Arctic_Machine.md)
+  - [Active Machine](HTB-WINDOWS/Active-Machine.md)
 - [Tryhackme Walkthrough](THM/README.md)
   - [Kenobi](THM/kenobi-THM.md)
 
