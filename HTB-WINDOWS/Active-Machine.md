@@ -2,7 +2,7 @@
 
 - **Machine Name:** Active
 - **Machine IP:** 10.10.10.100
-- **Machine Diff:** Easy
+- **Machine Diff:** Medium
 - **Machine OS:** Windows
 
 ---
