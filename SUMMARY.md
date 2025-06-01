@@ -14,6 +14,7 @@
   - [Arctic Machine](HTB-WINDOWS/Arctic_Machine.md)
   - [Active Machine](HTB-WINDOWS/Active-Machine.md)
   - [Blue Machine](HTB-WINDOWS/Blue_Machine.md)
+  - [Escape Machine](HTB-WINDOWS/Escape_Machine.md)
 - [Tryhackme Walkthrough](THM/README.md)
   - [Kenobi](THM/kenobi-THM.md)
 

@@ -7,3 +7,5 @@ List of HTB Windows boxes that are solved by ***Z3R0***
 | ![Legacy](images-legacy/cover_legacy.png) | ![](images-artic/cover_arctic.png)  |
 | [Active](Active-Machine.md)               | [Blue](Blue_Machine.md)             |
 | ![Active](images-active/cover-active.png) | ![Blue](images-blue/cover_blue.png) |
+| [Escape](Escape_Machine.md)               | SOON                                |
+| ![Escape](images-escape/cover_escape.png) | SOON                                |
