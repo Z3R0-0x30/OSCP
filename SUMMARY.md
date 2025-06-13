@@ -9,6 +9,7 @@
   - [Nibbles Machine](HTB-LINUX/Nibbles_Machine.md)
   - [Dog Machine](HTB-LINUX/Dog_Machine.md)
   - [Shocker Machine](HTB-LINUX/Shocker_Machine.md)
+  - [Pandora Machine](HTB-LINUX/Pandora_Machine.md)
 - [Hack the box - Windows](HTB-WINDOWS/README.md)
   - [Legacy Machine](HTB-WINDOWS/Legacy_Machine.md)
   - [Arctic Machine](HTB-WINDOWS/Arctic_Machine.md)
