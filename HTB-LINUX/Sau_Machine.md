@@ -198,7 +198,7 @@ We know through our `nmap` scan that there were two services which were displaye
 
 While I was researching about Maltrail CMS, I found an exploit on Maltrail v0.53 which was a command injection, and it utilizes a vulnerability in `/login` page where the username field is directly feede to `subprocess.check_output()` without any sanitization, so we can perform a malicious command injection which can give us a reverse shell. I developed my own exploit and avoided the github exploit, I just needed to make few changes and I am already good with python so I decided to take a shot and writing a new exploit for this vulnerability from my understanding. 
 
-**Link:**
+**Link:** [Maltrail_Exploit](https://github.com/Z3R0-0x30/Maltrail_0.53_RCE_Exploit)
 
 **Commands:**
 - `nc -lnvp 1337`
