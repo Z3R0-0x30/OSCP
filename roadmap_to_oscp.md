@@ -50,6 +50,8 @@ I don’t consider myself a professional—and maybe I never will. There’s alw
 So if you're down to learn more about:
 
 - Hack The Box machines
+- Try Hack Me Walkthroughs
+- Proving Ground Machines
 - CTFs
 - Red Teaming & Blue Teaming
 - Hardware Hacking & IoT
