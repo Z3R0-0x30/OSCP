@@ -49,6 +49,8 @@ A space for hackers, learners, and enthusiasts to grow, collaborate, and thrive.
 If you're into:
 
 - Hack The Box machines
+- Try Hack Me Walkthroughs
+- Proving Ground Machines
 - Capture The Flag (CTF) events
 - Red & Blue Teaming
 - Hardware & IoT Hacking
