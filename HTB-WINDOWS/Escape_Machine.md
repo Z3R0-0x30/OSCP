@@ -350,4 +350,3 @@ The *Escape* machine provided a realistic scenario emulating a misconfigured int
 If you want to learn more about cybersecurity or hacking, then follow me on my social and join the cybersec community:
 
 - [DISCORD](https://discord.gg/wyfwSxn3YB)
-- [Instagram](https://www.instagram.com/_0x30_/)

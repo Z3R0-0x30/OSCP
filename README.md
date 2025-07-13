@@ -4,9 +4,9 @@
 
 # 👋 Welcome to My HTB Journey
 
-## By *Z3R0 (0x30)*
+## By *0x30*
 
-Hey there! I’m **ZER0 (0x30)**, an anonymous cybersecurity researcher — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
+Hey there! I’m **Prince Patel**, a cybersecurity researcher — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
 
 Over the years, I’ve had the privilege of tackling countless security challenges, exploring various techniques, and solving complex problems in unique and creative ways. Through this platform, I want to share my knowledge, experiences, and passion for hacking with the community that made me who I am.
 
@@ -65,7 +65,6 @@ Then you’ll feel right at home here.
 Let’s build, learn, and hack together. Join the conversation, share ideas, and be part of the growing cyber army!
 
 - 💬 [Discord](https://discord.gg/wyfwSxn3YB)
-- 📸 [Instagram](https://www.instagram.com/_zerox30_?igsh=MWtidnJ5b3RhbTN2cw%3D%3D&utm_source=qr)
 
 ---
 
@@ -76,4 +75,4 @@ Let’s build, learn, and hack together. Join the conversation, share ideas, and
 
 Stay curious. Stay sharp. Stay ethical.  
 Let’s hack the world, **one box at a time**.  
-— _Z3R0_
+— _0x30_ 

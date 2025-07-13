@@ -223,6 +223,5 @@ The *Loly* machine offered a practical, hands-on experience simulating a real-wo
 If you liked this walkthrough and it helped your red-teaming, blue-teaming or general cyber-security skills and gave you a mindset of a hacker to solve further challenges, then do join my discord server for similar experience.
 
 - [Discord](https://discord.gg/wyfwSxn3YB)
-- [Instagram](https://www.instagram.com/_0x30_/)
 
 

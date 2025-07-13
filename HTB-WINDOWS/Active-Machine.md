@@ -236,10 +236,9 @@ The **"Active"** machine on HTB highlights several real-world misconfigurations 
 - **Monitor and limit Kerberos ticket requests,** and implement detection rules for unusual TGS-REQ activity.
 - **Regularly audit AD permissions, shares, and GPOs** to identify and remediate weak configurations.
 
-This machine serves as a reminder of how layered weaknesses - even without remote code execution - can be chained together to compromise a domain. If you liked my writeup and want to learn more, do consider joining my socials:
+This machine serves as a reminder of how layered weaknesses - even without remote code execution - can be chained together to compromise a domain. If you liked my writeup and want to learn more, do consider joining my social:
 
 - [DISCORD](https://discord.gg/wyfwSxn3YB)
-- [INSTAGRAM](https://www.instagram.com/_0x30_/#)
 
 
 

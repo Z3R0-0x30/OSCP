@@ -271,7 +271,6 @@ The Pandora box serves as a practical example of how seemingly low-risk services
 
 If you enjoyed this write-up and want to learn more about ethical hacking, CTFs, and real-world security techniques, feel free to connect with us:
 - **Discord Server:** [Discord](https://discord.gg/wyfwSxn3YB)
-- **Instagram:** [Instagram](https://www.instagram.com/_0x30_/)
 
 Let's grow and learn together in this ever-evolving field!
 

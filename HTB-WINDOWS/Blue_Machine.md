@@ -204,8 +204,7 @@ Key takeaways include:
 ### Final Thoughts
 *Blue* serves as a textbook example of how powerful known exploits can be if systems remain unpatched. Despite being a beginner-friendly machine, it underscores real-world threats and reinforces the value of strong cyber hygiene practices. If you are interested in cybersecurity and want to join a community of like-minded people then do join the following socials where I build a cybersecurity community:
 
-1. [Instagram](https://www.instagram.com/_0x30_)
-2. [Discord](https://discord.gg/wyfwSxn3YB)
+1. [Discord](https://discord.gg/wyfwSxn3YB)
 
 
 

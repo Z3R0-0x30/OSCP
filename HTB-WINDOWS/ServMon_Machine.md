@@ -377,7 +377,6 @@ ServMon presented a classic example of how multiple small misconfigurations - an
 
 ### Last note
 
-If you liked my writeup and want to be a part of my cybersecurity community then do join the following socials:
+If you liked my writeup and want to be a part of my cybersecurity community then do join the following social:
 
-1. [Instagram](https://www.instagram.com/_0x30_/)
-2. [Discord](https://discord.gg/wyfwSxn3YB)
+1. [Discord](https://discord.gg/wyfwSxn3YB)

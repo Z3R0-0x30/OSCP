@@ -274,9 +274,8 @@ Bang, we were able to get the root shell by misusing a simple feature, and this 
 - **Review and audit sudoers configuration** to follow the principle of least privilege.
 - **Use network segmentation** to prevent external actors from accessing internal resources, even via SSRF.
 
-If you liked the writeup and want to dive deeper into the field of cybersecurity, hacking, CTFs, red teaming or blue teaming then do consider joining my discord server and Instagram:
+If you liked the writeup and want to dive deeper into the field of cybersecurity, hacking, CTFs, red teaming or blue teaming then do consider joining my discord server:
 
 - [Discord](https://discord.gg/wyfwSxn3YB)
-- [Instagram](https://www.instagram.com/_0x30_)
 
 
