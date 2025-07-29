@@ -2,7 +2,7 @@
 
 - **Machine Name:** Escape
 - **Machine IP:** 10.10.11.202
-- **Machine Type:** Easy
+- **Machine Type:** Medium
 - **Machine OS:** Windows
 
 ---
