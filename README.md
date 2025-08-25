@@ -64,7 +64,7 @@ Then you’ll feel right at home here.
 
 Let’s build, learn, and hack together. Join the conversation, share ideas, and be part of the growing cyber army!
 
-- 💬 [Discord](https://discord.gg/wyfwSxn3YB)
+- 💬 [LinkdIn](https://www.linkedin.com/in/prince-patel-72065b262/)
 
 ---
 
