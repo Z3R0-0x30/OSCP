@@ -60,14 +60,6 @@ Then you’ll feel right at home here.
 
 ---
 
-## 📡 Connect With Me
-
-Let’s build, learn, and hack together. Join the conversation, share ideas, and be part of the growing cyber army!
-
-- 💬 [LinkdIn](https://www.linkedin.com/in/prince-patel-72065b262/)
-
----
-
 ## 🧠 Final Words
 
 > I don’t consider myself a professional—and maybe I never will. There’s always someone better.  
