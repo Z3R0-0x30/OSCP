@@ -22,6 +22,7 @@
   - [Kenobi](THM/kenobi-THM.md)
 - [Proving Ground - Linux](PG-LINUX/README.md)
   - [Loly Machine](PG-LINUX/Loly_Machine.md)
+  - [Clue Machine](PG-LINUX/Clue_Machine.md)
   
 
 
