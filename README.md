@@ -2,11 +2,11 @@
 
 ![](cover_page.png)
 
-# 👋 Welcome to My HTB Journey
+# 👋 Welcome to My Hacking Journey
 
-## By *0x30*
+## By *Z3R0*
 
-Hey there! I’m **Prince Patel**, a cybersecurity researcher — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
+Hey there! I’m a cybersecurity researcher — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
 
 Over the years, I’ve had the privilege of tackling countless security challenges, exploring various techniques, and solving complex problems in unique and creative ways. Through this platform, I want to share my knowledge, experiences, and passion for hacking with the community that made me who I am.
 
@@ -15,7 +15,7 @@ Over the years, I’ve had the privilege of tackling countless security challeng
 
 This is the **Introduction** to my live journey toward the **OSCP** certification.
 
-Here, I’ll be sharing detailed **Hack The Box (HTB) writeups**, walkthroughs, and insights—designed for both beginners and seasoned hackers. Whether you're:
+Here, I’ll be sharing detailed **Hack The Box (HTB) writeups**, **TryHackMe (THM)**, and **Proving Grounds (PG)** walkthroughs, and insights—designed for both beginners and seasoned hackers. Whether you're:
 
 - Just starting out in cybersecurity
 - Preparing for your **OSCP**
