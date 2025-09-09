@@ -1,6 +1,6 @@
 ## Linux Machines
 
-List of HTB Linux boxes that are solved by ****Z3R0***
+List of HTB Linux boxes that are solved by ***Z3R0***
 
 | [Lame](Lame_Machine.md)                      | [Sense](Sense_Machine.md)                    |
 | -------------------------------------------- | -------------------------------------------- |
