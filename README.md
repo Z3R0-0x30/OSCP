@@ -4,7 +4,7 @@
 
 # 👋 Welcome to My Hacking Journey
 
-## By *Z3R0*
+## By *Prince*
 
 Hey there! I’m a cybersecurity researcher — a passionate **penetration tester**, **red teamer**, and all-around **offensive hacker** who thrives on uncovering the unexpected and pushing the boundaries of security.
 
