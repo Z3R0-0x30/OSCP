@@ -1,6 +1,6 @@
 # Summary
 
-- [Intro - whoami](README.md)
+- [Intro - whoami](OSCP/README.md)
 - [Roadmap to OSCP - Hackthebox](roadmap_to_oscp.md)
 - [Hack the box - Linux](HTB-LINUX/README.md)
   - [Lame Machine](HTB-LINUX/Lame_Machine.md)
@@ -23,6 +23,8 @@
 - [Proving Ground - Linux](PG-LINUX/README.md)
   - [Loly Machine](PG-LINUX/Loly_Machine.md)
   - [Clue Machine](PG-LINUX/Clue_Machine.md)
+- [Threat Hunting 101](Threat-Hunting/README.md)
+  - [ChangeNOW](Threat_Hunting/ChangeNOW.md)
   
 
 
