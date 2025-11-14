@@ -24,7 +24,7 @@
   - [Loly Machine](PG-LINUX/Loly_Machine.md)
   - [Clue Machine](PG-LINUX/Clue_Machine.md)
 - [Threat Hunting 101](Threat-Hunting/README.md)
-  - [ChangeNOW](Threat_Hunting/ChangeNOW.md)
+  - [ChangeNOW](Threat-Hunting/ChangeNOW.md)
   
 
 
