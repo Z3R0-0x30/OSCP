@@ -1,3 +1,5 @@
+<span class="subtitle">Date: 13th Nov 2025</span>
+<span class="subtitle">Author: Z3R0</span>
 
 It was a crisp Tuesday evening, November 11, 2025, and I was unwinding with a documentary about the murky world of cybercrime—specifically, how hackers move in the shadows, donning black hats and orchestrating scams. The story stirred up memories of a group I had been investigating a couple of months ago, a clandestine collective known as _LucasLeaks_. Back then, I had painstakingly dissected their elaborate, heavily obfuscated JavaScript payloads, the very code they used to siphon Bitcoin from unsuspecting victims. After successfully debunking their scheme, the group seemed to vanish, leaving nothing but digital traces and whispers in the wind.
 
