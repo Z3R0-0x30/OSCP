@@ -23,7 +23,7 @@
 - [Proving Ground - Linux](PG-LINUX/README.md)
   - [Loly Machine](PG-LINUX/Loly_Machine.md)
   - [Clue Machine](PG-LINUX/Clue_Machine.md)
-- [Threat Hunting 101](Threat-Hunting/README.md)
+- [Hall of Threats](Threat-Hunting/README.md)
   - [🎯Hunting ChangeNOW - A Multi-layered JS Ambush](Threat-Hunting/🎯Hunting%20ChangeNOW%20-%20A%20Multi-layered%20JS%20Ambush.md)
   
 
