@@ -2,7 +2,7 @@
 
 ![](cover_page.png)
 
-# 👋 Welcome to My Hacking Journey
+# Welcome to My Hacking Journey
 
 ## By *Z3R0*
 
@@ -29,15 +29,15 @@ You’ll find valuable content here to boost your skills, one machine at a time.
 
 I'm a hands-on hacker who loves diving deep into a wide variety of offensive topics. Some of the areas I specialize in:
 
-- 🧠 Binary Exploitation
-- 🌐 Web Application Exploitation
-- 🔐 Privilege Escalation (Windows & Linux)
-- 🔍 Reverse Engineering
-- 📡 Network Attacks & Exploits
-- 🧮 Cryptography Challenges
-- 🧰 Post-Exploitation Techniques
-- 🖥️ Windows & Linux Exploitation
-- 🏢 Active Directory Attacks
+- Binary Exploitation
+- Web Application Exploitation
+- Privilege Escalation (Windows & Linux)
+- Reverse Engineering
+- Network Attacks & Exploits
+- Cryptography Challenges
+- Post-Exploitation Techniques
+- Windows & Linux Exploitation
+- Active Directory Attacks
 
 ---
 
@@ -67,4 +67,4 @@ Then you’ll feel right at home here.
 
 Stay curious. Stay sharp. Stay ethical.  
 Let’s hack the world, **one box at a time**.  
-— _0x30_ 
+— _zero_
