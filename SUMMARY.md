@@ -1,6 +1,6 @@
 # Summary
 
-- [Intro - whoami](README.md)
+- [Intro - whoami](OSCP/README.md)
 - [Roadmap to OSCP - Hackthebox](roadmap_to_oscp.md)
 - [Hack the box - Linux](HTB-LINUX/README.md)
   - [Lame Machine](HTB-LINUX/Lame_Machine.md)
@@ -25,6 +25,9 @@
   - [Clue Machine](PG-LINUX/Clue_Machine.md)
 - [Hall of Threats](Threat-Hunting/README.md)
   - [🎯Hunting ChangeNOW - A Multi-layered JS Ambush](Threat-Hunting/🎯Hunting%20ChangeNOW%20-%20A%20Multi-layered%20JS%20Ambush.md)
+- [MalwareAcademy](Malware/README.md)
+  - [Linux-Rootkit-Kernel-Modules-1](Malware/Linux-rootkit-kernel-modules-1.md)
+  - [Linux-Rootkit-Symbols-2](Malware/Linux-rootkit-symbols-2.md)
   
 
 

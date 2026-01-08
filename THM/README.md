@@ -1,6 +1,6 @@
 ## Tryhackme Walkthrough
 
-List of THM Machines that are solved by ***Prince***
+List of THM Machines that are solved by ***Z3R0***
 
 | [Kenobi](kenobi-THM.md)                   | SOON |
 | ----------------------------------------- | ---- |

@@ -1,6 +1,6 @@
 ## PG-Linux Machines
 
-List of Proving Ground Linux boxes that are solved by ***Prince***
+List of Proving Ground Linux boxes that are solved by ***Z3R0***
 
 | [Loly](Loly_Machine.md)      | [Clue](Clue_Machine.md)  |
 | ---------------------------- | ------------------------ |
